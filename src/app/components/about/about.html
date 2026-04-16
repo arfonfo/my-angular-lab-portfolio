@@ -1,0 +1,28 @@
+<section id="sobre-mi" class="py-20 px-6 bg-dark-card/30">
+  <div class="max-w-4xl mx-auto">
+    <div class="flex items-center mb-8">
+      <lucide-icon name="user" [size]="32" class="mr-3 text-accent-primary"></lucide-icon>
+      <h2 class="text-4xl font-bold text-dark-text">Perfil</h2>
+    </div>
+
+    <div class="space-y-6">
+      <p class="text-lg text-dark-muted leading-relaxed">
+        Desarrollador de aplicaciones web con experiencia en el sector de RRHH.
+        Resolutivo, con atención al detalle y hábil en la gestión de las relaciones
+        interprofesionales.
+      </p>
+
+      <div class="bg-dark-card border border-dark-border rounded-lg p-6">
+        <h3 class="text-xl font-semibold text-dark-text mb-4">Soft Skills</h3>
+        <div class="grid md:grid-cols-2 gap-3">
+          @for (skill of softSkills; track skill) {
+            <div class="flex items-start space-x-2">
+              <span class="text-accent-primary mt-1">▸</span>
+              <span class="text-dark-muted">{{ skill }}</span>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,56 @@
+<section id="inicio" class="min-h-screen flex items-center justify-center px-6 pt-20">
+  <div class="max-w-4xl w-full">
+    <div class="text-center mb-12">
+      <h1 class="text-5xl md:text-7xl font-bold mb-4 text-dark-text">
+        Alfonso José Sánchez Costa
+      </h1>
+      <p class="text-2xl md:text-3xl text-accent-primary mb-8">
+        Desarrollador Web
+      </p>
+      <p class="text-lg text-dark-muted max-w-2xl mx-auto mb-8">
+        Junior Software Developer en NTT Data. Especializado en desarrollo de aplicaciones web
+        con experiencia en gestión de RRHH y atención al detalle.
+      </p>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+      <a href="mailto:alfonsojose.sanchez@gmail.com"
+         class="flex items-center justify-center space-x-2 bg-dark-card border border-dark-border px-4 py-3 rounded-lg hover:border-accent-primary transition-colors">
+        <lucide-icon name="mail" [size]="18" class="text-accent-primary"></lucide-icon>
+        <span class="text-sm text-dark-text">Email</span>
+      </a>
+
+      <a href="tel:660185041"
+         class="flex items-center justify-center space-x-2 bg-dark-card border border-dark-border px-4 py-3 rounded-lg hover:border-accent-primary transition-colors">
+        <lucide-icon name="phone" [size]="18" class="text-accent-primary"></lucide-icon>
+        <span class="text-sm text-dark-text">660 185 041</span>
+      </a>
+
+      <a href="https://github.com/arfonfo" target="_blank" rel="noopener noreferrer"
+         class="flex items-center justify-center space-x-2 bg-dark-card border border-dark-border px-4 py-3 rounded-lg hover:border-accent-primary transition-colors">
+        <lucide-icon name="github" [size]="18" class="text-accent-primary"></lucide-icon>
+        <span class="text-sm text-dark-text">GitHub</span>
+      </a>
+
+      <a href="https://linkedin.com/in/alfonso-sanchez" target="_blank" rel="noopener noreferrer"
+         class="flex items-center justify-center space-x-2 bg-dark-card border border-dark-border px-4 py-3 rounded-lg hover:border-accent-primary transition-colors">
+        <lucide-icon name="linkedin" [size]="18" class="text-accent-primary"></lucide-icon>
+        <span class="text-sm text-dark-text">LinkedIn</span>
+      </a>
+    </div>
+
+    <div class="flex justify-center space-x-4">
+      <button
+        (click)="scrollToSection('proyectos')"
+        class="bg-accent-primary text-white px-8 py-3 rounded-lg hover:bg-accent-hover transition-colors">
+        Ver Proyectos
+      </button>
+      <button
+        (click)="scrollToSection('contacto')"
+        class="border border-accent-primary text-accent-primary px-8 py-3 rounded-lg hover:bg-accent-primary hover:text-white transition-colors">
+        Contactar
+      </button>
+    </div>
+  </div>
+</section>

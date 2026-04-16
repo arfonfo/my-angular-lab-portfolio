@@ -1,0 +1,31 @@
+<section id="habilidades" class="py-20 px-6">
+  <div class="max-w-6xl mx-auto">
+    <div class="flex items-center mb-12">
+      <lucide-icon name="code" [size]="32" class="mr-3 text-accent-primary"></lucide-icon>
+      <h2 class="text-4xl font-bold text-dark-text">Habilidades Técnicas</h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      @for (category of skillCategories; track category.category) {
+        <div class="bg-dark-card border border-dark-border rounded-lg p-6">
+          <h3 class="text-xl font-semibold text-accent-primary mb-6">
+            {{ category.category }}
+          </h3>
+
+          <div class="space-y-4">
+            @for (skill of category.skills; track skill.name) {
+              <div class="flex justify-between mb-2">
+                <span class="text-dark-text">{{ skill.name }}</span>
+                <span class="text-dark-muted text-sm">{{ skill.level }}%</span>
+              </div>
+              <div class="w-full bg-dark-bg rounded-full h-2">
+                <div class="bg-accent-primary rounded-full h-2 transition-all duration-500"
+                     [style.width.%]="skill.level"></div>
+              </div>
+            }
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

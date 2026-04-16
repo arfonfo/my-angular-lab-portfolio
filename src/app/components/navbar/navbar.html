@@ -1,0 +1,39 @@
+<nav class="fixed w-full z-50 transition-all duration-300" [ngClass]="scrolled() ? 'bg-dark-bg/95 backdrop-blur-sm border-b border-dark-border' : 'bg-transparent'">
+  <div class="max-w-6xl mx-auto px-6 py-4">
+    <div class="flex justify-between items-center">
+      <h1 class="text-xl font-bold text-dark-text">Alfonso Sánchez</h1>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex space-x-8">
+        @for (section of sections; track section.id) {
+          <button (click)="scrollToSection(section.id)"
+                  [ngClass]="activeSection === section.id ? 'text-accent-primary font-medium' : 'text-dark-muted hover:text-dark-text'"
+                  class="text-sm transition-colors duration-200">
+            {{ section.label }}
+          </button>
+        }
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button class="md:hidden text-dark-text" (click)="toggleMenu()">
+        @if (isMenuOpen()) {
+          <lucide-icon name="x" [size]="24"></lucide-icon>
+        } @else {
+          <lucide-icon name="menu" [size]="24"></lucide-icon>
+        }
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    @if (isMenuOpen()) {
+      <div class="md:hidden mt-4 pb-4 space-y-3 border-t border-dark-border pt-4">
+        @for (section of sections; track section.id) {
+          <button (click)="scrollToSection(section.id)"
+                  class="block w-full text-left text-dark-muted hover:text-dark-text transition-colors py-2">
+            {{ section.label }}
+          </button>
+        }
+      </div>
+    }
+  </div>
+</nav>
